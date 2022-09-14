@@ -31,18 +31,25 @@ void WriteFile(vector<vector<int>> answer_subsets, int answer_num)
 	int print_num;
 	ofstream out("D:\output.txt", ios::app);
 
-	if (answer_num < 4)
-		print_num = answer_num;
-	else print_num = 3;
-
-	for (int i = 0; i < print_num; i++)
+	if (answer_num > 0)
 	{
-		for (int j = 0; j < answer_subsets[i].size(); j++)
+		out << "YES" << endl;
+
+		if (answer_num < 4)
+			print_num = answer_num;
+		else print_num = 3;
+
+		for (int i = 0; i < print_num; i++)
 		{
-			out << answer_subsets[i][j] << " ";
+			for (int j = 0; j < answer_subsets[i].size(); j++)
+			{
+				out << answer_subsets[i][j] << " ";
+			}
+			out << endl;
 		}
-		out << endl;
 	}
+	else
+		out << "NO";
 
 	out << endl << answer_num;
 	out.close();
