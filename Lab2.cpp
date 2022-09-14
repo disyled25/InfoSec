@@ -2,7 +2,6 @@
 #include <fstream>
 #include <sstream>
 #include <vector>
-#include <cmath>
 using namespace std;
 
 //reads data from .txt file
